@@ -1,4 +1,5 @@
-<img width="2816" height="1536" alt="Onizuka_logo" src="https://github.com/user-attachments/assets/08842cbe-9813-48f2-802d-d88cdf87fe27" />
+<img width="2560" height="1396" alt="Onizuka_logo" src="https://github.com/user-attachments/assets/13b90daf-eff0-4ce6-b7e4-1b15c2334a7e" />
+
 <div align="center">
 
 # 👹 ONIZUKA KERNEL V1
