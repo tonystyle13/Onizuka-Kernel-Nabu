@@ -5,7 +5,7 @@
 ### The Ultimate Cloud Gaming Kernel for Xiaomi Pad 5 (Nabu)
 ### *Optimized for Stock HyperOS (Android 13)*
 
-[![Version](https://img.shields.io/badge/Version-V1.0_Final-red?style=for-the-badge)](https://github.com/tonystyle13)
+[![Version](https://img.shields.io/badge/Version-V1.0-red?style=for-the-badge)](https://github.com/tonystyle13)
 [![Device](https://img.shields.io/badge/Device-Xiaomi_Pad_5-orange?style=for-the-badge)](https://github.com/tonystyle13)
 [![License](https://img.shields.io/badge/License-GPLv2-blue?style=for-the-badge)](LICENSE)
 
@@ -93,7 +93,8 @@ Validated on **Xiaomi Pad 5 (Nabu)** with:
 2.  Flash `Onizuka_Kernel_V1.zip`.
 3.  Reboot.
 4.  *Wait 25 seconds after boot for the Magisk script to apply settings.*
-
+---
+This is the first release,i might release other versions if I encounter bugs that need fixing in the long term.
 ---
 
 ## 🏆 Credits & Special Thanks
