@@ -1,6 +1,5 @@
 <img width="2816" height="1536" alt="Onizuka_logo" src="https://github.com/user-attachments/assets/08842cbe-9813-48f2-802d-d88cdf87fe27" />
 <div align="center">
-  <img src="onizuka_logo.png" alt="Onizuka Kernel Logo" width="100%">
 
 # 👹 ONIZUKA KERNEL V1
 ### The Ultimate Cloud Gaming Kernel for Xiaomi Pad 5 (Nabu)
@@ -30,7 +29,7 @@
 
 ## 📖 The Story Behind
 As a dad, the living room TV is often hijacked by the kids. Gaming on the couch became my escape.
-I own a **Lenovo Legion Go**, which is an absolute beast. However, I often prefer the **bigger 11-inch WQHD+ screen** of the Xiaomi Pad 5 for better immersion and visual comfort.
+I own a **Lenovo Legion Go**, which is an absolute beast. However, I often prefer the **bigger 11-inch WQHD+ screen** of the Xiaomi Pad 5 for better immersion and visual comfort. Why Onizuka? I just like the character, nothing more.
 
 **The Quest for Zero Latency:**
 After testing dozens of AOSP ROMs, I found that decoding latency for high-bitrate cloud gaming was always higher than on Stock ROMs. I returned to the official **OS1.0.6.0.TKXEUXM** and the performance difference was night and day:
