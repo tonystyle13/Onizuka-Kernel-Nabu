@@ -110,10 +110,10 @@ This project stands on the shoulders of giants:
 
 ## 📸 Proofs & Benchmarks
 <p align="center">
-  <img src="screen![screenlatency2](https://github.com/user-attachments/assets/bdb5118f-b8d2-45c9-9a76-dc53b1ff9f69)
-![screenlatency1](https://github.com/user-attachments/assets/350af0ab-1357-4d36-920b-c53d7755d6a9)
-latency1.jpg" width="30%" />
-  <img src="screenlatency2.jpg" width="30%" />
+  <img src="![screen_latency1](https://github.com/user-attachments/assets/1cd7cd3a-9bd1-4117-9903-269828bb44a1)" width="30%" />
+  <img src="![screen_latency2](https://github.com/user-attachments/assets/9cefe5a1-cc57-4aef-9347-ef14f47e4545)" width="30%" />
+
+
 </p>
 
 <div align="center">
