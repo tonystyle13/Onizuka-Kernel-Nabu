@@ -1,3 +1,4 @@
+<img width="2816" height="1536" alt="Onizuka_logo" src="https://github.com/user-attachments/assets/08842cbe-9813-48f2-802d-d88cdf87fe27" />
 <div align="center">
   <img src="onizuka_logo.png" alt="Onizuka Kernel Logo" width="100%">
 
@@ -56,7 +57,7 @@ This kernel **adds missing drivers** and **activates specific kernel flags** (Fo
 
 ## ⚡ Key Features & Optimizations
 
-### 1. 🛡️ Anti-Crash Memory Guard (The COD Fix)
+### 1. 🛡️ Anti-Crash Memory Guard 
 Fixed reboots during heavy gameplay (Audio + Rumble + Network) caused by memory fragmentation.
 * **FIX:** Reserved **128MB of physical RAM** exclusively for critical Kernel tasks (`min_free_kbytes`).
 * **FIX:** Hard-patched the source to increase Binder Buffer to **4MB** and increased Threads to **128**.
@@ -68,7 +69,7 @@ Standard Xiaomi kernels lock the memory mapping limit, causing PC emulators to c
 * **Result:** Native support for **Winlator and Mobox** without "Permission Denied" errors.
 
 ### 3. 🔋 Voltage Stability (Schedutil)
-The "Performance" governor was too aggressive on some units, causing power collapse.
+The "Performance" governor was too aggressive on some units, causing power and battery collapse.
 * **Optimized:** Switched to a custom-tuned **Schedutil** (0.5ms reaction time).
 * **Benefit:** Maximum responsiveness while preventing sudden shutdowns.
 
@@ -94,7 +95,7 @@ Validated on **Xiaomi Pad 5 (Nabu)** with:
 3.  Reboot.
 4.  *Wait 25 seconds after boot for the Magisk script to apply settings.*
 ---
-This is the first release,i might release other versions if I encounter bugs that need fixing in the long term.
+This is the first release, i might release other versions if I encounter bugs that need fixing in the long term.
 ---
 
 ## 🏆 Credits & Special Thanks
