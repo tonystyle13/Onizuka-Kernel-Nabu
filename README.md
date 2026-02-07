@@ -33,7 +33,7 @@ As a dad, the living room TV is often hijacked by the kids. Gaming on the couch 
 I own a **Lenovo Legion Go**, which is an absolute beast. However, I often prefer the **bigger 11-inch WQHD+ screen** of the Xiaomi Pad 5 for better immersion and visual comfort. Why Onizuka? I just like the character, nothing more.
 
 **The Quest for Zero Latency:**
-After testing dozens of AOSP ROMs, I found that decoding latency for high-bitrate cloud gaming was always higher than on Stock ROMs. I returned to the official **OS1.0.6.0.TKXEUXM** and the performance difference was night and day:
+After testing dozens of AOSP ROMs, I found that decoding latency for high-bitrate cloud gaming was always higher than on Stock ROMs. I returned to the official **OS1.0.6.0.TKXEUXM** and the difference was night and day:
 * **BetterXCloud:** Latency dropped to **4-5ms**.
 * **Artemis (Moonlight Fork):** Latency dropped to **5-7ms** even at **Native 2560x1600 @ 120 FPS**.
 
@@ -104,16 +104,14 @@ This project stands on the shoulders of giants:
 * **Xiaomi:** For the kernel source code.
 * **osm0sis:** For the AnyKernel3 flashable zip template.
 * **The Linux Kernel Team:** For the upstream patches (BBR, Schedutil) and driver support.
-* **Gemini Pro** For help with log analysis and debugging the memory allocation crashes.
+* **AI Assistance:** For help with log analysis and debugging the memory allocation crashes.
 
 ---
 
 ## 📸 Proofs & Benchmarks
 <p align="center">
-  <img src="![screen_latency1](https://github.com/user-attachments/assets/1cd7cd3a-9bd1-4117-9903-269828bb44a1)" width="30%" />
-  <img src="![screen_latency2](https://github.com/user-attachments/assets/9cefe5a1-cc57-4aef-9347-ef14f47e4545)" width="30%" />
-
-
+  <img src="https://github.com/user-attachments/assets/1cd7cd3a-9bd1-4117-9903-269828bb44a1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/9cefe5a1-cc57-4aef-9347-ef14f47e4545" width="45%" />
 </p>
 
 <div align="center">
