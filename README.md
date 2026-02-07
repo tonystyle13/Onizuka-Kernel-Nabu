@@ -107,6 +107,15 @@ This project stands on the shoulders of giants:
 * **Gemini Pro** For help with log analysis and debugging the memory allocation crashes.
 
 ---
+
+## 📸 Proofs & Benchmarks
+<p align="center">
+  <img src="screen![screenlatency2](https://github.com/user-attachments/assets/bdb5118f-b8d2-45c9-9a76-dc53b1ff9f69)
+![screenlatency1](https://github.com/user-attachments/assets/350af0ab-1357-4d36-920b-c53d7755d6a9)
+latency1.jpg" width="30%" />
+  <img src="screenlatency2.jpg" width="30%" />
+</p>
+
 <div align="center">
 <i>"Built for low latency. Built for rumble. Built for Gaming."</i>
 </div>
