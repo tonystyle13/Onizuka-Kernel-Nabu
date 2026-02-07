@@ -40,7 +40,8 @@ After testing dozens of AOSP ROMs, I found that decoding latency for high-bitrat
 **The Problem:**
 While fast, the Stock ROM had a critical flaw: the **Bluetooth Controller vs. Touchscreen conflict**. Streaming at high resolution while using a controller with rumble would overload the system memory allocation, causing the touchscreen to freeze or the tablet to violently reboot (Kernel Panic) during heavy action scenes like shooting in Call of Duty.
 
-**Onizuka Kernel V1 is the survivor.** It keeps the incredible low latency of the Stock ROM while implementing "Ironclad" stability fixes to prevent crashes under heavy load.
+After testing numerous kernels and going through several build iterations, I finally achieved the perfect stability build 
+ready to be shared with people who have the same problem as me, **Onizuka Kernel V1 is the survivor.** It keeps the incredible low latency of the Stock ROM while implementing "Ironclad" stability fixes to prevent crashes under heavy load.
 
 ---
 
