@@ -60,8 +60,8 @@ This kernel **adds missing drivers** and **activates specific kernel flags** (Fo
 
 ### 1. 🛡️ Anti-Crash Memory Guard 
 Fixed reboots during heavy gameplay (Audio + Rumble + Network) caused by memory fragmentation.
-* **FIX:** Reserved **128MB of physical RAM** exclusively for critical Kernel tasks (`min_free_kbytes`).
-* **FIX:** Hard-patched the source to increase Binder Buffer to **4MB** and increased Threads to **128**.
+* **FIX:** Reserved **256MB of physical RAM** exclusively for critical Kernel tasks (`min_free_kbytes`).
+* **FIX:** Hard-patched the source to increase Binder Buffer to **8MB** and increased Threads to **256**.
 * **Result:** No more reboots when shooting in Call of Duty.
 
 ### 2. 🖥️ Winlator & PC Emulation Ready
@@ -69,10 +69,11 @@ Standard Xiaomi kernels lock the memory mapping limit, causing PC emulators to c
 * **FIX:** Hard-coded `max_map_count` to **524,288** (Steam Deck standard) directly in the source code.
 * **Result:** Native support for **Winlator and Mobox** without "Permission Denied" errors.
 
-### 3. 🔋 Voltage Stability (Schedutil)
-The "Performance" governor was too aggressive on some units, causing power and battery collapse.
-* **Optimized:** Switched to a custom-tuned **Schedutil** (0.5ms reaction time).
-* **Benefit:** Maximum responsiveness while preventing sudden shutdowns.
+### 3. 🔋 CPU Sweet Spot & Adreno Boost
+Optimized for sustained performance without thermal throttling.
+* **CPU Tuning:** Prime Core (7) locked to **Performance Mode** (2.01GHz) for instant processing, while other cores use Schedutil.
+* **GPU Adreno:** Enabled **"No Nap"** mode to prevent the GPU from sleeping between frames, ensuring maximum smoothness.
+* **SchedTune:** Global Boost set to **10** for foreground tasks.
 
 ### 4. 🚀 System Optimizations & Joyose Killer
 * **Joyose Removed:** Disables the service that throttles performance.
