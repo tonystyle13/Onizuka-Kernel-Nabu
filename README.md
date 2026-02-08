@@ -2,11 +2,11 @@
 
 <div align="center">
 
-# 👹 ONIZUKA KERNEL V1
+# 👹 ONIZUKA KERNEL V1.1
 ### The Ultimate Cloud Gaming Kernel for Xiaomi Pad 5 (Nabu)
 ### *Optimized for Stock HyperOS (Android 13)*
 
-[![Version](https://img.shields.io/badge/Version-V1.0-red?style=for-the-badge)](https://github.com/tonystyle13)
+[![Version](https://img.shields.io/badge/Version-V1.1-red?style=for-the-badge)](https://github.com/tonystyle13)
 [![Device](https://img.shields.io/badge/Device-Xiaomi_Pad_5-orange?style=for-the-badge)](https://github.com/tonystyle13)
 [![License](https://img.shields.io/badge/License-GPLv2-blue?style=for-the-badge)](LICENSE)
 
@@ -58,11 +58,12 @@ This kernel **adds missing drivers** and **activates specific kernel flags** (Fo
 
 ## ⚡ Key Features & Optimizations
 
-### 1. 🛡️ Anti-Crash Memory Guard 
+### 1. 🛡️ Anti-Crash Memory Guard (V1.1 Update)
 Fixed reboots during heavy gameplay (Audio + Rumble + Network) caused by memory fragmentation.
 * **FIX:** Reserved **256MB of physical RAM** exclusively for critical Kernel tasks (`min_free_kbytes`).
-* **FIX:** Hard-patched the source to increase Binder Buffer to **8MB** and increased Threads to **256**.
-* **Result:** No more reboots when shooting in Call of Duty.
+* **FIX:** **64-bit Binder IPC Enabled:** Unlocked the memory addressing limit which caused "No Address Space" errors.
+* **FIX:** Hard-patched the source to set Binder Buffer to **4MB (Sweet Spot)** and optimized Threads to **64** for maximum stability.
+* **Result:** No more reboots or freeze when shooting in Call of Duty.
 
 ### 2. 🖥️ Winlator & PC Emulation Ready
 Standard Xiaomi kernels lock the memory mapping limit, causing PC emulators to crash.
@@ -71,7 +72,7 @@ Standard Xiaomi kernels lock the memory mapping limit, causing PC emulators to c
 
 ### 3. 🔋 CPU Sweet Spot & Adreno Boost
 Optimized for sustained performance without thermal throttling.
-* **CPU Tuning:** Prime Core (7) locked to **Performance Mode** (2.01GHz) for instant processing, while other cores use Schedutil.
+* **CPU Tuning:** Prime Core (7) locked to **Performance Mode** (2.01GHz) for instant processing.
 * **GPU Adreno:** Enabled **"No Nap"** mode to prevent the GPU from sleeping between frames, ensuring maximum smoothness.
 * **SchedTune:** Global Boost set to **10** for foreground tasks.
 
@@ -93,11 +94,11 @@ Validated on **Xiaomi Pad 5 (Nabu)** with:
 
 ## 📥 Installation
 1.  **Backup your current Boot image** in TWRP (Critical).
-2.  Flash `Onizuka_Kernel_V1.zip`.
+2.  Flash `Onizuka_Kernel_V1.1_Stable.zip`.
 3.  Reboot.
 4.  *Wait 25 seconds after boot for the Magisk script to apply settings.*
 ---
-This is the first release, i might release other versions if I encounter bugs that need fixing in the long term.
+This is the stable release. I might release other versions if I encounter bugs that need fixing in the long term.
 ---
 
 ## 🏆 Credits & Special Thanks
