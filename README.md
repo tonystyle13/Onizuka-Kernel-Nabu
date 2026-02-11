@@ -2,11 +2,11 @@
 
 <div align="center">
 
-# 👹 ONIZUKA KERNEL V1.1
+# 👹 ONIZUKA KERNEL V1.2
 ### The Ultimate Cloud Gaming Kernel for Xiaomi Pad 5 (Nabu)
 ### *Optimized for Stock HyperOS (Android 13)*
 
-[![Version](https://img.shields.io/badge/Version-V1.1-red?style=for-the-badge)](https://github.com/tonystyle13)
+[![Version](https://img.shields.io/badge/Version-V1.2-red?style=for-the-badge)](https://github.com/tonystyle13)
 [![Device](https://img.shields.io/badge/Device-Xiaomi_Pad_5-orange?style=for-the-badge)](https://github.com/tonystyle13)
 [![License](https://img.shields.io/badge/License-GPLv2-blue?style=for-the-badge)](LICENSE)
 
@@ -24,7 +24,7 @@
     * **❌ AOSP / LineageOS / DerpFest:** Not supported. Flashing this on AOSP ROMs will likely cause a **Bootloop**.
 
 2.  **ROOT REQUIRED:** You **MUST** have **Magisk** installed.
-    * *Why?* The core optimization scripts (Memory Guard, CPU Tuning, Joyose Killer) are injected into `/data/adb/service.d/`. **Without Magisk, these scripts will NOT run.**
+    * *Why?* The core optimization scripts (GPU Boost, CPU Tuning, Joyose Killer) are injected into `/data/adb/service.d/`. **Without Magisk, these scripts will NOT run.**
 
 ---
 
@@ -40,8 +40,8 @@ After testing dozens of AOSP ROMs, I found that decoding latency for high-bitrat
 **The Problem:**
 While fast, the Stock ROM had a critical flaw: the **Bluetooth Controller vs. Touchscreen conflict**. Streaming at high resolution while using a controller with rumble would overload the system memory allocation, causing the touchscreen to freeze or the tablet to violently reboot (Kernel Panic) during heavy action scenes like shooting in Call of Duty.
 
-After testing numerous kernels and going through several build iterations, I finally achieved the perfect stability build 
-ready to be shared with people who have the same problem as me, **Onizuka Kernel V1 is the survivor.** It keeps the incredible low latency of the Stock ROM while implementing "Ironclad" stability fixes to prevent crashes under heavy load.
+After testing numerous kernels and going through several build iterations, I finally achieved the perfect stability build.
+**Onizuka Kernel V1.2** is the evolution. It moves away from heavy memory hacks and solves the root cause (Input Driver Fixes) while keeping the incredible low latency of the Stock ROM.
 
 ---
 
@@ -58,29 +58,28 @@ This kernel **adds missing drivers** and **activates specific kernel flags** (Fo
 
 ## ⚡ Key Features & Optimizations
 
-### 1. 🛡️ Anti-Crash Memory Guard (V1.1 Update)
-Fixed reboots during heavy gameplay (Audio + Rumble + Network) caused by memory fragmentation.
-* **FIX:** Reserved **256MB of physical RAM** exclusively for critical Kernel tasks (`min_free_kbytes`).
-* **FIX:** **64-bit Binder IPC Enabled:** Unlocked the memory addressing limit which caused "No Address Space" errors.
-* **FIX:** Hard-patched the source to set Binder Buffer to **4MB (Sweet Spot)** and optimized Threads to **64** for maximum stability.
-* **Result:** No more reboots or freeze when shooting in Call of Duty.
+### 1. 🛡️ Smart Stability & Input Fix (V1.2 Update)
+Replaced the old memory hacks with surgical driver fixes.
+* **FIX:** **Tactile Rescued:** Removed the "0/0/0" EV_SYN filter in `input.c` that was causing the touchscreen to freeze during heavy gaming.
+* **FIX:** **Null Pointer Guard:** Added strict checks (`!dev`) in Input and HID drivers to prevent Kernel Panics if a device disconnects.
+* **FIX:** **Clean Binder:** Now using 32-bit Binder with 4MB buffer injected via Command Line (AnyKernel) instead of hard-patching source. Safer and cleaner.
 
-### 2. 🖥️ Winlator & PC Emulation Ready
-Standard Xiaomi kernels lock the memory mapping limit, causing PC emulators to crash.
-* **FIX:** Hard-coded `max_map_count` to **524,288** (Steam Deck standard) directly in the source code.
-* **Result:** Native support for **Winlator and Mobox** without "Permission Denied" errors.
+### 2. 🎮 Rumble Throttle & Protection
+Cloud Gaming can sometimes spam vibration data, choking the tablet.
+* **FIX:** Implemented a **Smart Throttle** in `ff-memless`. It limits vibration updates to every 4ms, which is invisible to the user but saves the CPU from crashing.
+* **FIX:** Added **Clamps** (Limiters) for Sony, Xbox, and Nintendo controllers to prevent motors from requesting unsafe power levels.
 
 ### 3. 🔋 CPU Sweet Spot & Adreno Boost
 Optimized for sustained performance without thermal throttling.
-* **CPU Tuning:** Prime Core (7) locked to **Performance Mode** (2.01GHz) for instant processing.
-* **GPU Adreno:** Enabled **"No Nap"** mode to prevent the GPU from sleeping between frames, ensuring maximum smoothness.
+* **CPU Tuning:** L3 Cache minimum frequency boosted to **1612MHz** via script for snappier asset loading.
+* **GPU Adreno:** Enabled **"No Nap"** mode via script to prevent the GPU from sleeping between frames, ensuring maximum smoothness.
 * **SchedTune:** Global Boost set to **10** for foreground tasks.
 
 ### 4. 🚀 System Optimizations & Joyose Killer
 * **Joyose Removed:** Disables the service that throttles performance.
 * **I/O Read-Ahead:** Boosted to **2048KB** for fast asset loading.
-* **TCP BBR:** Enabled congestion control for stable high-bitrate streaming.
-* **120Hz Locked:** Ensures maximum smoothness.
+* **TCP BBR + Busy Poll:** Enabled congestion control and network busy polling for lower latency in streaming.
+* **120Hz Locked:** Script enforces min/peak refresh rate to 120Hz after boot.
 
 ---
 
@@ -94,9 +93,9 @@ Validated on **Xiaomi Pad 5 (Nabu)** with:
 
 ## 📥 Installation
 1.  **Backup your current Boot image** in TWRP (Critical).
-2.  Flash `Onizuka_Kernel_V1.1_Stable.zip`.
+2.  Flash `Onizuka_Kernel_V1.2.zip`.
 3.  Reboot.
-4.  *Wait 25 seconds after boot for the Magisk script to apply settings.*
+4.  *Wait 60 seconds after boot for the Magisk script to apply settings.*
 ---
 This is the stable release. I might release other versions if I encounter bugs that need fixing in the long term.
 ---
